@@ -16,8 +16,8 @@ public class CustomerApi {
         this.customerService = customerService;
     }
 
-    @GetMapping("/")
-    private String getCustomerByName() {
+    @GetMapping(value = "/")
+    public String getCustomerByName() {
         String name = "NHAN";
 
         List<Customer> customers = customerService.getCustomers(name);
