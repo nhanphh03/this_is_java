@@ -5,56 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9b03eb3-8ac1-4517-b646-f8ffebe01ca4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/config/cache/CacheConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/config/datasource/DataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/dto/CustomerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/repository/jdbc/CustomerJdbcRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/repository/jpa/CustomerJPARepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/service/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/resources/static/cache2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring/cache/memory/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/cache/memory/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring/cache/memory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/cache/memory/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring/cache/memory/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/cache/memory/src/main/java/com/cache/memory/service/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ppzC5h2NqfPIaSY96NDDIyKJv5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "N:/Git Nhan Pham/this_is_java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/Git Nhan Pham/this_is_java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="N:\Git Nhan Pham\this_is_java" />
@@ -101,7 +92,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -135,6 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733477673684</updated>
       <workItem from="1733477674776" duration="984000" />
+      <workItem from="1734329556057" duration="305000" />
     </task>
     <servers />
   </component>
