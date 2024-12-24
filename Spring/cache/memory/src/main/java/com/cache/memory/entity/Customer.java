@@ -10,10 +10,7 @@ import lombok.*;
 import java.io.Serializable;
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class Customer  implements Serializable {
 
     @Id
