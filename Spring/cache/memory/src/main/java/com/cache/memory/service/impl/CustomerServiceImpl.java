@@ -6,28 +6,46 @@ import com.cache.memory.entity.Customer;
 import com.cache.memory.repository.jpa.CustomerJPARepository;
 import com.cache.memory.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerJPARepository customerRepository;
 
+    private final JdbcTemplate jdbcTemplate;
+
     private final RedisTemplate<String, Object> redisTemplate;
 
     public CustomerServiceImpl(CustomerJPARepository customerRepository,
-                               @Qualifier("redisTemplate") RedisTemplate<String, Object> redisTemplate) {
+                               RedisTemplate<String,
+                               Object> redisTemplate,
+                               JdbcTemplate jdbcTemplate) {
         this.customerRepository = customerRepository;
+        this.jdbcTemplate = jdbcTemplate;
         this.redisTemplate = redisTemplate;
+    }
+
+    @Override
+    @Transactional
+    public List<Customer> getAllCustomers() {
+        String sql = "update customer set name = ? where id = ?";
+        String name = "Nhan Pham";
+        String id = "1";
+        jdbcTemplate.update(sql, name, id);
+
+        String sql2 = "Phan Ly bi mat mat";
+        jdbcTemplate.update(sql2); // query gây lỗi
+
+        return customerRepository.findAll();
     }
 
     @Autowired
@@ -54,4 +72,6 @@ public class CustomerServiceImpl implements CustomerService {
 
         return customerPage;
     }
+
+
 }

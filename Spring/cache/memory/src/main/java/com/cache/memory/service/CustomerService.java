@@ -9,4 +9,5 @@ public interface CustomerService {
 
     List<Customer> getCustomers(String name);
     Page<Customer> getAllCustomers(int page, int size);
+    List<Customer> getAllCustomers();
 }
