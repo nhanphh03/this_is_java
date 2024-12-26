@@ -3,6 +3,8 @@ package com.cache.memory.service.impl;
 
 import com.cache.memory.config.redis.CachePage;
 import com.cache.memory.entity.Customer;
+import com.cache.memory.repository.jdbc.CustomerJdbcRepository;
+import com.cache.memory.repository.jpa.AccountJPARepository;
 import com.cache.memory.repository.jpa.CustomerJPARepository;
 import com.cache.memory.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,15 +23,23 @@ public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerJPARepository customerRepository;
 
+    private final AccountJPARepository accountJPARepository;
+
+    private final CustomerJdbcRepository customerJdbcRepository;
+
     private final JdbcTemplate jdbcTemplate;
 
     private final RedisTemplate<String, Object> redisTemplate;
 
     public CustomerServiceImpl(CustomerJPARepository customerRepository,
+                                CustomerJdbcRepository customerJdbcRepository,
+                               AccountJPARepository accountJPARepository,
                                RedisTemplate<String,
                                Object> redisTemplate,
                                JdbcTemplate jdbcTemplate) {
         this.customerRepository = customerRepository;
+        this.customerJdbcRepository = customerJdbcRepository;
+        this.accountJPARepository = accountJPARepository;
         this.jdbcTemplate = jdbcTemplate;
         this.redisTemplate = redisTemplate;
     }
@@ -37,24 +47,27 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional
     public List<Customer> getAllCustomers() {
-        String sql = "update customer set name = ? where id = ?";
-        String name = "Nhan Pham";
-        String id = "1";
-        jdbcTemplate.update(sql, name, id);
-
-        String sql2 = "Phan Ly bi mat mat";
-        jdbcTemplate.update(sql2); // query gây lỗi
-
-        return customerRepository.findAll();
+        return null;
+//        return customerJdbcRepository.getListCustomer();
     }
 
-    @Autowired
+    @Override
+    public Integer countAllCustomers() {
+
+//    Integer a = customerRepository.findAll().size();
+//    Integer b = accountJPARepository.findAll().size();
+//
+        Integer a = customerJdbcRepository.getListCustomer();
+        Integer b = customerJdbcRepository.getListAccount().size();
+
+        return a + b;
+    }
+
     @Transactional
     public List<Customer> getCustomers(String name) {
         return customerRepository.findByName(name);
     }
 
-    @Autowired
     @CachePage(value = "allAccounts")
     public Page<Customer> getAllCustomers(int page, int size) {
         String cacheKey = "users:" + page + ":" + size;

@@ -11,7 +11,9 @@ import java.io.Serializable;
 
 @Entity
 @Data
-public class Customer  implements Serializable {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Customer implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +24,4 @@ public class Customer  implements Serializable {
     private int age;
 
     private String address;
-
 }

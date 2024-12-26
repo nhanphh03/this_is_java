@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableJpaRepositories(basePackages = "com.cache.memory.repository.jpa")
-public class DataSourceConfig extends HikariConfig {
+public class DataSourceConfigHikariPool extends HikariConfig {
 
     @Value("${spring.datasource.driver-class-name}")
     private String driver;

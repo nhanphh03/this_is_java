@@ -16,6 +16,7 @@ import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.time.Duration;
+import java.util.Objects;
 
 @Configuration
 @EnableCaching
@@ -38,8 +39,6 @@ public class RedisConfig {
         redisTemplate.setConnectionFactory(redisConnectionFactory());
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<>(Object.class);
-        //redisTemplate.setValueSerializer(RedisSerializer.json());
-       // redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));  // Serialize với Jackson
         redisTemplate.setValueSerializer(serializer);
         return redisTemplate;
     }
@@ -52,7 +51,7 @@ public class RedisConfig {
                 .entryTtl(Duration.ofMinutes(10));
 
         return RedisCacheManager.RedisCacheManagerBuilder
-                .fromConnectionFactory(redisTemplate.getConnectionFactory())
+                .fromConnectionFactory(Objects.requireNonNull(redisTemplate.getConnectionFactory()))
                 .cacheDefaults(cacheConfig)
                 .build();
     }

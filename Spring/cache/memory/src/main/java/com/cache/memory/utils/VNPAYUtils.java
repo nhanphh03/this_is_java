@@ -9,6 +9,11 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public class VNPAYUtils {
+
+    private static final Random rnd = new Random();
+    private VNPAYUtils() {
+    }
+
     public static String hmacSHA512(final String key, final String data) {
         try {
             if (key == null || data == null) {
@@ -32,7 +37,6 @@ public class VNPAYUtils {
     }
 
     public static String getRandomNumber(int len) {
-        Random rnd = new Random();
         String chars = "0123456789";
         StringBuilder sb = new StringBuilder(len);
         for (int i = 0; i < len; i++) {
