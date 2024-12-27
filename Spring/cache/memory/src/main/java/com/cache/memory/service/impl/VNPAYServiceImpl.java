@@ -21,9 +21,11 @@ public class VNPAYServiceImpl implements VNPayService {
     public String createVnPayPayment() {
         String bankCode = "VNBANK";
         Map<String, String> vnpParamsMap = vnPayConfig.getVNPayConfig();
-        vnpParamsMap.put("vnp_Amount", String.valueOf(100000L * 100L));
+        vnpParamsMap.put("vnp_Amount", String.valueOf(1909000L * 100L));
         vnpParamsMap.put("vnp_BankCode", bankCode);
         vnpParamsMap.put("vnp_IpAddr", "127.0.0.1");
+
+
         //build query url
         String queryUrl = VNPAYUtils.getPaymentURL(vnpParamsMap, true);
         String hashData = VNPAYUtils.getPaymentURL(vnpParamsMap, false);
@@ -47,5 +49,11 @@ public class VNPAYServiceImpl implements VNPayService {
             return "Error: " + e.getMessage();
         }
     }
+
+    public String getResponse() {
+        System.out.println("Nhan response thanh cong");
+        return "";
+    }
+
 
 }
