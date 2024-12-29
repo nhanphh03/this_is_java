@@ -53,17 +53,17 @@ public class DataSourceConfigHikariPool extends HikariConfig {
       tương tác với cơ sở dữ liệu thông qua JDBC.
 
      #JdbcTemplate
-    Sử dụng dấu chấm hỏi ? làm placeholder cho tham số.
-    Các tham số được truyền vào thông qua mảng hoặc danh sách (theo thứ tự).
-    Khó hiểu khi có nhiều tham số vì phải đảm bảo thứ tự chính xác.
-     Dùng khi câu SQL đơn giản và số lượng tham số ít, hoặc khi hiệu suất là ưu tiên cao
-     (vì JdbcTemplate có thể nhanh hơn một chút trong một số trường hợp do không phải xử lý tên tham số).
+        Sử dụng dấu chấm hỏi ? làm placeholder cho tham số.
+        Các tham số được truyền vào thông qua mảng hoặc danh sách (theo thứ tự).
+        Khó hiểu khi có nhiều tham số vì phải đảm bảo thứ tự chính xác.
+         Dùng khi câu SQL đơn giản và số lượng tham số ít, hoặc khi hiệu suất là ưu tiên cao
+         (vì JdbcTemplate có thể nhanh hơn một chút trong một số trường hợp do không phải xử lý tên tham số).
 
-    #NamedParameterJdbcTemplate
-    Sử dụng tên tham số (named parameters) trong câu SQL.
-    Các tham số được truyền vào thông qua một đối tượng Map hoặc SqlParameterSource.
-    Dễ đọc và dễ duy trì hơn vì sử dụng tên tham số thay vì dựa vào thứ tự.
-    Dùng khi câu SQL phức tạp hoặc có nhiều tham số, giúp code dễ đọc và bảo trì hơn.
+        #NamedParameterJdbcTemplate
+        Sử dụng tên tham số (named parameters) trong câu SQL.
+        Các tham số được truyền vào thông qua một đối tượng Map hoặc SqlParameterSource.
+        Dễ đọc và dễ duy trì hơn vì sử dụng tên tham số thay vì dựa vào thứ tự.
+        Dùng khi câu SQL phức tạp hoặc có nhiều tham số, giúp code dễ đọc và bảo trì hơn.
      */
 
     @Bean

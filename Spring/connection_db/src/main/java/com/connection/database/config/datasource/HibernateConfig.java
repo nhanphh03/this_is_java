@@ -4,6 +4,8 @@ import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.sql.Connection;
+
 public class HibernateConfig {
 
     @Getter
@@ -16,7 +18,7 @@ public class HibernateConfig {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
-                configuration.configure("src/main/resources/hibernate.cfg.xml");
+                configuration.configure();
                 sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
                 System.out.println("Error creating session factory: " + e);

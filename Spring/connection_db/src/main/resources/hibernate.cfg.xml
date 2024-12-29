@@ -18,6 +18,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Cấu hình mapping -->
-<!--        <mapping class="com.example.YourEntityClass"/>-->
+        <mapping class="com.connection.database.entity.Account"/>
     </session-factory>
 </hibernate-configuration>

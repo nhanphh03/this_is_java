@@ -1,13 +1,12 @@
 package com.connection.database.config.datasource;
 
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Configurable;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -16,6 +15,7 @@ import java.sql.SQLException;
  */
 
 @Log4j2
+@Configuration
 public class ConnectJDBCBasicConnection {
 
     @Value("${spring.datasource.driver-class-name}")
@@ -30,7 +30,7 @@ public class ConnectJDBCBasicConnection {
     @Value("${spring.datasource.username}")
     private String username;
 
-    private ConnectJDBCBasicConnection(){}
+    public ConnectJDBCBasicConnection(){}
 
     @Bean(name = "jdbcBasicRepository")
     public Connection getConnection() {
@@ -41,6 +41,57 @@ public class ConnectJDBCBasicConnection {
             log.error("{}", e.getMessage());
         }
         return null;
+    }
+
+
+    public static void setAutoCommit(Connection connection, boolean autoCommit){
+        try {
+            if (connection != null) {
+                connection.setAutoCommit(autoCommit);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void closePreparedStatement(PreparedStatement preparedStatement, Logger logger){
+        try {
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+        } catch (SQLException e) {
+            logger.error("Error closing PreparedStatement {}", e.getMessage());
+        }
+    }
+
+    public static void closeResultSet(ResultSet resultSet, Logger logger){
+        try {
+            if (resultSet != null) {
+                resultSet.close();
+            }
+        } catch (SQLException e) {
+            logger.error("Error closing ResultSet {}", e.getMessage());
+        }
+    }
+
+    public static void closeConnection(Connection connection, Logger logger){
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            logger.error("Error closing Connection {}", e.getMessage());
+        }
+    }
+
+    public static void rollbackConnection(Connection connection, Logger logger){
+        try {
+            if (connection != null) {
+                connection.rollback();
+            }
+        } catch (SQLException e) {
+            logger.error("Error rollback Connection {}", e.getMessage());
+        }
     }
 
 }

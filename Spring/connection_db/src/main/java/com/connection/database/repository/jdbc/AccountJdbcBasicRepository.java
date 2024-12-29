@@ -14,7 +14,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static com.connection.database.config.datasource.ConnectJDBCBasicConnection.*;
 
+@Repository
 public class AccountJdbcBasicRepository {
 
     private static final Logger log = LoggerFactory.getLogger(AccountJdbcBasicRepository.class);
@@ -26,7 +28,7 @@ public class AccountJdbcBasicRepository {
     }
     
 
-    public Integer getListaccountV2() {
+    public Integer getListAccountV2() {
         String query = "select * from cusotmer ";
 
         String query2 = "select * from account c where c.name = 'Nhan'";
@@ -35,13 +37,7 @@ public class AccountJdbcBasicRepository {
         List<Account> list2 = new ArrayList<>();
 
         Connection c = connection.getConnection();
-        try {
-            if (c != null) {
-                c.setAutoCommit(false);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        setAutoCommit(c, true);
 
         ResultSet rs = null;
         ResultSet rs2 = null;
@@ -101,28 +97,20 @@ public class AccountJdbcBasicRepository {
         return 0;
     }
 
-    public Integer getListaccount() {
+    public Integer getListAccountV3() {
 
         String query = "INSERT INTO account (id, name, age) " +
-                "VALUES (4, 'NHAN', 18)";
+                " VALUES (4, 'NHAN', 18)";
 
 
         String query2 = "INSERT INTO account (id, name, age) " +
-                "     VALUES (4, 'NHAN', 18)";
+                " VALUES (4, 'NHAN', 18)";
 
-        List<Account> list = new ArrayList<>();
         List<Account> list2 = new ArrayList<>();
 
         Connection connection = this.connection.getConnection();
-        try {
-            if (connection != null) {
-                connection.setAutoCommit(false);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        setAutoCommit(connection, true);
 
-        ResultSet rs = null;
         ResultSet rs2 = null;
 
         PreparedStatement ps = null;
@@ -146,27 +134,12 @@ public class AccountJdbcBasicRepository {
                 return list2.size();
 
             } catch (Exception e) {
-                try {
-                    connection.rollback();
-                } catch (SQLException ex) {
-                    log.error("Error closing resources", ex);
-                }
-                AccountJdbcBasicRepository.log.error(e.getMessage());
+                rollbackConnection(connection, log);
             }finally {
-                try {
-                    if (rs2 != null) {
-                        rs2.close();
-                    }
-                    if (ps != null) {
-                        ps.close();
-                    }
-                    if (ps2 != null) {
-                        ps2.close();
-                    }
-                    connection.close();
-                } catch (SQLException ex) {
-                    log.error("Error closing resources", ex);
-                }
+                closeResultSet(rs2, log);
+                closePreparedStatement(ps2, log);
+                closePreparedStatement(ps, log);
+                closeConnection(connection, log);
             }
         }
         return 0;
@@ -175,14 +148,8 @@ public class AccountJdbcBasicRepository {
     public List<Account> getListAccount() {
         String query = "select * from account ";
         List<Account> list = new ArrayList<>();
-            Connection connection = this.connection.getConnection();
-        try {
-            if (connection != null) {
-                connection.setAutoCommit(false);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        Connection connection = this.connection.getConnection();
+        setAutoCommit(connection, true);
         ResultSet rs = null;
         PreparedStatement ps = null;
         if (connection != null) {
@@ -198,24 +165,10 @@ public class AccountJdbcBasicRepository {
                 }
                 return list;
             } catch (Exception e) {
-                try {
-                    connection.rollback();
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                AccountJdbcBasicRepository.log.error(e.getMessage());
+                rollbackConnection(connection, log);
             }finally {
-                try {
-                    if (rs != null) {
-                        rs.close();
-                    }
-                    if (ps != null) {
-                        ps.close();
-                    }
-                    connection.close();
-                } catch (SQLException ex) {
-                    log.error("Error closing resources", ex);
-                }
+                closeResultSet(rs, log);
+                closePreparedStatement(ps, log);
             }
         }
         return Collections.emptyList();

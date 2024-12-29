@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService {
 //    @Autowired
 //    private AccountHibernateRepository accountHibernateRepository;
 
-    public AccountServiceImpl(AccountJdbcBasicRepository accountJdbcBasicRepository,
+    public AccountServiceImpl( AccountJdbcBasicRepository accountJdbcBasicRepository,
                                AccountJPARepository accountJPARepository,
                                AccountJdbcTemplateRepository jdbcTemplateRepository) {
         this.accountJdbcBasicRepository = accountJdbcBasicRepository;
@@ -35,7 +35,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Integer countAllAccounts() {
-        Integer a = accountJdbcBasicRepository.getListaccount();
+        Integer a = accountJdbcBasicRepository.getListAccountV3();
         Integer b = accountJdbcBasicRepository.getListAccount().size();
         return a + b;
     }
@@ -60,6 +60,7 @@ public class AccountServiceImpl implements AccountService {
         return jdbcTemplateRepository.getAllAccountJDBCTemplate();
     }
 
+    // FIXME: Hàm này chưa xử lý.
     private Account createNewAccountHibernate(Account account){
 //        account.setId(accountHibernateRepository.createAccount(account));
         return account;
