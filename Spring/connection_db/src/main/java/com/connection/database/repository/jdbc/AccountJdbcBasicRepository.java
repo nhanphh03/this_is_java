@@ -2,14 +2,14 @@ package com.connection.database.repository.jdbc;
 
 import com.connection.database.config.datasource.ConnectJDBCBasicConnection;
 import com.connection.database.entity.Account;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.log4j.Log4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,7 +19,7 @@ import static com.connection.database.config.datasource.ConnectJDBCBasicConnecti
 @Repository
 public class AccountJdbcBasicRepository {
 
-    private static final Logger log = LoggerFactory.getLogger(AccountJdbcBasicRepository.class);
+    private static final Logger log = LogManager.getLogger(AccountJdbcBasicRepository.class);
 
     private final ConnectJDBCBasicConnection connection;
 
@@ -68,30 +68,13 @@ public class AccountJdbcBasicRepository {
                 }
                 return list.size() + list2.size();
             } catch (Exception e) {
-                try {
-                    c.rollback();
-                } catch (SQLException ex) {
-                    log.error("Error closing resources", ex);
-                }
-                AccountJdbcBasicRepository.log.error(e.getMessage());
+                rollbackConnection(c, log);
             }finally {
-                try {
-                    if (rs != null) {
-                        rs.close();
-                    }
-                    if (rs2 != null) {
-                        rs2.close();
-                    }
-                    if (ps != null) {
-                        ps.close();
-                    }
-                    if (ps2 != null) {
-                        ps2.close();
-                    }
-                    c.close();
-                } catch (SQLException ex) {
-                    log.error("Error closing resources", ex);
-                }
+                closeResultSet(rs2, log);
+                closeResultSet(rs, log);
+                closePreparedStatement(ps2, log);
+                closePreparedStatement(ps, log);
+                closeConnection(c, log);
             }
         }
         return 0;

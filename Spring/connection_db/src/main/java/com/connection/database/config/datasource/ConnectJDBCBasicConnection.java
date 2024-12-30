@@ -1,7 +1,7 @@
 package com.connection.database.config.datasource;
 
-import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,9 +14,10 @@ import java.sql.*;
  * Cấu hình một connection đơn giản tới database
  */
 
-@Log4j2
 @Configuration
 public class ConnectJDBCBasicConnection {
+
+    private static final Logger log = LogManager.getLogger(ConnectJDBCBasicConnection.class);
 
     @Value("${spring.datasource.driver-class-name}")
     private String driverConnection;
