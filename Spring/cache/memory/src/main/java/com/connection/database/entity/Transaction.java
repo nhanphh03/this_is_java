@@ -3,7 +3,8 @@ package com.connection.database.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -18,10 +19,10 @@ public class Transaction {
     private Long accountID;
 
     @Column(name = "transaction_date")
-    private Date transactionDate;
+    private LocalDateTime transactionDate;
 
     @Column(name = "amount")
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(name = "transaction_type")
     private String transactionType;
