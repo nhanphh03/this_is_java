@@ -1,4 +1,4 @@
-package com.connection.database.config.datasource;
+package com.connection.database.config.datasource.basic_jdbc;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

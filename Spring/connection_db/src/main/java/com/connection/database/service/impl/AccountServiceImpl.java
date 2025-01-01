@@ -1,6 +1,6 @@
 package com.connection.database.service.impl;
 
-import com.connection.database.entity.Account;
+import com.connection.database.entity.jpa.Account;
 import com.connection.database.repository.jdbc.AccountJdbcBasicRepository;
 import com.connection.database.repository.jdbc.AccountJdbcTemplateRepository;
 import com.connection.database.repository.jpa.AccountJPARepository;

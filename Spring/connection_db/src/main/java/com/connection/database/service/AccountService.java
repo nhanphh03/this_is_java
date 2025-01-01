@@ -1,6 +1,6 @@
 package com.connection.database.service;
 
-import com.connection.database.entity.Account;
+import com.connection.database.entity.jpa.Account;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

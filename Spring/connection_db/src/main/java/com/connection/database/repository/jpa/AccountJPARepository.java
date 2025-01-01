@@ -1,6 +1,6 @@
 package com.connection.database.repository.jpa;
 
-import com.connection.database.entity.Account;
+import com.connection.database.entity.jpa.Account;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

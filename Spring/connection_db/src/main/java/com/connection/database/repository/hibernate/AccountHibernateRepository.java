@@ -1,7 +1,7 @@
 package com.connection.database.repository.hibernate;
 
-import com.connection.database.config.datasource.HibernateConfig;
-import com.connection.database.entity.Account;
+import com.connection.database.config.datasource.hibernate.HibernateConfig;
+import com.connection.database.entity.jpa.Account;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

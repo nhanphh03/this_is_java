@@ -2,10 +2,10 @@ package com.connection.database.config.datasource;
 
 import lombok.Getter;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import java.sql.Connection;
-
+@Configuration
 public class HibernateConfig {
 
     @Getter
@@ -14,10 +14,12 @@ public class HibernateConfig {
 
     private HibernateConfig() {}
 
+
+    @Bean
     public SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-                Configuration configuration = new Configuration();
+                org.hibernate.cfg.Configuration configuration = new org.hibernate.cfg.Configuration();
                 configuration.configure();
                 sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
@@ -33,5 +35,4 @@ public class HibernateConfig {
             sessionFactory.close();
         }
     }
-
 }

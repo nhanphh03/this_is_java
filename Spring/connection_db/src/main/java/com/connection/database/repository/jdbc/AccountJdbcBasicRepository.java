@@ -1,7 +1,7 @@
 package com.connection.database.repository.jdbc;
 
-import com.connection.database.config.datasource.ConnectJDBCBasicConnection;
-import com.connection.database.entity.Account;
+import com.connection.database.config.datasource.basic_jdbc.ConnectJDBCBasicConnection;
+import com.connection.database.entity.jpa.Account;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.connection.database.config.datasource.ConnectJDBCBasicConnection.*;
+import static com.connection.database.config.datasource.basic_jdbc.ConnectJDBCBasicConnection.*;
 
 @Repository
 public class AccountJdbcBasicRepository {

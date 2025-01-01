@@ -70,14 +70,13 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate-entitymanager.version}</version>
         </dependency>
+        <!--hibernate end-->
 
-        <!--c3p0 connection pool end-->
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
             <version>${c3p0.version}</version>
         </dependency>
-        <!--c3p0 connection pool end-->
 
         <dependency>
             <groupId>org.mapstruct</groupId>

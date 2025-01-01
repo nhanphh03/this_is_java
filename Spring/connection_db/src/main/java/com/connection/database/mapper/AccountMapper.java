@@ -1,7 +1,7 @@
 package com.connection.database.mapper;
 
 import com.connection.database.dto.AccountDTO;
-import com.connection.database.entity.Account;
+import com.connection.database.entity.jpa.Account;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
