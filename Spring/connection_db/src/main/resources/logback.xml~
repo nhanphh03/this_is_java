@@ -1,10 +1,10 @@
 <configuration>
     <!-- Appender: Console -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
 
     <!-- Appender: File -->
 <!--    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
@@ -24,8 +24,8 @@
 <!--    </appender>-->
 
     <!-- Root Logger -->
-    <root level="debug">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
-    </root>
+<!--    <root level="debug">-->
+<!--        <appender-ref ref="CONSOLE" />-->
+<!--        <appender-ref ref="FILE" />-->
+<!--    </root>-->
 </configuration>

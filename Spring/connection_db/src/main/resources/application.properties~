@@ -11,7 +11,7 @@ spring.jpa.show-sql=true
 spring.datasource.hikari.schema=spring_boot
 spring.datasource.hikari.auto-commit=true
 spring.datasource.hikari.connection-timeout=1000000
-spring.datasource.hikari.maximum-pool-size=
+spring.datasource.hikari.maximum-pool-size=2
 spring.datasource.hikari.max-lifetime=1100000
 
 logging.level.org.hibernate.orm.connections.pooling=OFF
