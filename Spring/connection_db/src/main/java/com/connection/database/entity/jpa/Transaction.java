@@ -1,8 +1,12 @@
 package com.connection.database.entity.jpa;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 
@@ -12,6 +16,8 @@ import java.sql.Timestamp;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"@class"})
+@Table(name = "transaction")
 public class Transaction {
 
     @Id
@@ -23,10 +29,12 @@ public class Transaction {
     private Long accountID;
 
     @Column(name = "transaction_date")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Timestamp transactionDate;
 
     @Column(name = "amount")
-    private Integer amount;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private BigDecimal amount;
 
     @Column(name = "transaction_type")
     private String transactionType;

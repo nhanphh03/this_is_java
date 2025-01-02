@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,7 +61,7 @@ public class TransactionJDBCRepository {
                         rs.getLong(1),
                         rs.getLong(2),
                         rs.getTimestamp(3),
-                        rs.getInt(4),
+                        rs.getBigDecimal(4),
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
@@ -79,17 +80,18 @@ public class TransactionJDBCRepository {
         return transactionList;
     }
 
-    public List<Transaction> findTransactionsByAccountIdJDBCTemplate(Long accountId) {
-//        String sql = "SELECT * FROM transaction WHERE account_id = :accountId ";
-        String sql = "SELECT * FROM transaction WHERE account_id = :accountId LIMIT 10000 OFFSET 0;";
+    public List<Transaction> findTransactionsByAccountIdJDBCTemplate(Long accountId, Integer rows, Long index) {
+        String sql = "SELECT * FROM transaction WHERE account_id = :accountId LIMIT :rowNums OFFSET :rowIndex;";
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("accountId", accountId);
+        parameterSource.addValue("rowNums", rows);
+        parameterSource.addValue("rowIndex", index);
 
         return jdbcTemplate.query(sql, parameterSource, (rs, rowNum) -> new Transaction(
                 rs.getLong("transaction_id"),
                 rs.getLong("account_id"),
                 rs.getTimestamp("transaction_date"),
-                rs.getInt("amount"),
+                rs.getBigDecimal("amount"),
                 rs.getString("transaction_type"),
                 rs.getString("status"),
                 rs.getString("currency"),
@@ -102,7 +104,7 @@ public class TransactionJDBCRepository {
                 rs.getLong("id"),
                 rs.getLong("account_id"),
                 rs.getTimestamp("created_at"),
-                rs.getInt("status"),
+                rs.getBigDecimal("amount"),
                 rs.getString("description"),
                 rs.getString("type"),
                 rs.getString("currency"),

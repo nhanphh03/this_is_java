@@ -1998,3 +1998,806 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2025-01-02T11:01:21.130+07:00  INFO 16616 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-02T11:01:21.132+07:00  INFO 16616 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-02T11:01:21.146+07:00  INFO 16616 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:03:20.166+07:00  INFO 25348 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 25348 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:03:20.167+07:00  INFO 25348 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:03:20.524+07:00  INFO 25348 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:03:20.569+07:00  INFO 25348 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:03:21.049+07:00  INFO 25348 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:03:21.057+07:00  INFO 25348 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:03:21.058+07:00  INFO 25348 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:03:21.091+07:00  INFO 25348 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:03:21.092+07:00  INFO 25348 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 891 ms
+2025-01-02T14:03:21.133+07:00  INFO 25348 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:03:21.486+07:00  INFO 25348 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c81cd82
+2025-01-02T14:03:21.488+07:00  INFO 25348 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:03:21.523+07:00  INFO 25348 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:03:21.570+07:00  INFO 25348 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:03:21.595+07:00  INFO 25348 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:03:21.835+07:00  INFO 25348 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:03:21.913+07:00  WARN 25348 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:03:22.460+07:00  INFO 25348 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:03:22.541+07:00  INFO 25348 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:03:22.745+07:00  INFO 25348 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:03:22.747+07:00  WARN 25348 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:03:22.768+07:00  WARN 25348 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:03:22.781+07:00  INFO 25348 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:03:22.929+07:00  INFO 25348 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:03:23.340+07:00  WARN 25348 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:03:23.574+07:00  INFO 25348 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:03:23.578+07:00  INFO 25348 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 3.698 seconds (process running for 4.146)
+2025-01-02T14:03:51.645+07:00  INFO 25348 --- [connectionDB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:03:51.645+07:00  INFO 25348 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:03:51.646+07:00  INFO 25348 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:05:23.354+07:00  INFO 25348 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:05:23.359+07:00  INFO 25348 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:05:23.364+07:00  INFO 25348 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:05:23.365+07:00  INFO 25348 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:05:23.372+07:00  INFO 25348 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:05:28.520+07:00  INFO 31140 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 31140 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:05:28.522+07:00  INFO 31140 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:05:28.814+07:00  INFO 31140 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:05:28.840+07:00  INFO 31140 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:05:29.255+07:00  INFO 31140 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:05:29.262+07:00  INFO 31140 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:05:29.262+07:00  INFO 31140 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:05:29.298+07:00  INFO 31140 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:05:29.298+07:00  INFO 31140 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 744 ms
+2025-01-02T14:05:29.331+07:00  INFO 31140 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:05:29.589+07:00  INFO 31140 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@435e416c
+2025-01-02T14:05:29.590+07:00  INFO 31140 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:05:29.620+07:00  INFO 31140 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:05:29.665+07:00  INFO 31140 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:05:29.690+07:00  INFO 31140 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:05:29.915+07:00  INFO 31140 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:05:29.973+07:00  WARN 31140 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:05:30.513+07:00  INFO 31140 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:06:05.505+07:00  INFO 31140 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:06:05.742+07:00  INFO 31140 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:06:05.744+07:00  WARN 31140 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:06:05.772+07:00  WARN 31140 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:06:05.784+07:00  INFO 31140 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:06:05.934+07:00  INFO 31140 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:06:06.365+07:00  WARN 31140 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:06:06.586+07:00  INFO 31140 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:06:06.590+07:00  INFO 31140 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 38.311 seconds (process running for 38.672)
+2025-01-02T14:08:08.185+07:00  INFO 31140 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:08:08.190+07:00  INFO 31140 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:08:08.194+07:00  INFO 31140 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:08:08.195+07:00  INFO 31140 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:08:08.203+07:00  INFO 31140 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:08:13.312+07:00  INFO 9808 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 9808 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:08:13.313+07:00  INFO 9808 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:08:13.794+07:00  INFO 9808 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:08:13.824+07:00  INFO 9808 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:08:14.211+07:00  INFO 9808 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:08:14.218+07:00  INFO 9808 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:08:14.218+07:00  INFO 9808 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:08:14.246+07:00  INFO 9808 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:08:14.246+07:00  INFO 9808 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 899 ms
+2025-01-02T14:08:14.279+07:00  INFO 9808 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:08:14.484+07:00  INFO 9808 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f5bf288
+2025-01-02T14:08:14.486+07:00  INFO 9808 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:08:14.511+07:00  INFO 9808 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:08:14.538+07:00  INFO 9808 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:08:14.556+07:00  INFO 9808 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:08:14.749+07:00  INFO 9808 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:08:14.797+07:00  WARN 9808 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:08:15.272+07:00  INFO 9808 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:09:58.598+07:00  INFO 17960 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 17960 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:09:58.599+07:00  INFO 17960 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:09:58.892+07:00  INFO 17960 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:09:58.917+07:00  INFO 17960 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:09:59.314+07:00  INFO 17960 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:09:59.322+07:00  INFO 17960 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:09:59.322+07:00  INFO 17960 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:09:59.352+07:00  INFO 17960 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:09:59.353+07:00  INFO 17960 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 723 ms
+2025-01-02T14:09:59.385+07:00  INFO 17960 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:09:59.595+07:00  INFO 17960 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@706f6d26
+2025-01-02T14:09:59.597+07:00  INFO 17960 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:09:59.622+07:00  INFO 17960 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:09:59.650+07:00  INFO 17960 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:09:59.668+07:00  INFO 17960 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:09:59.857+07:00  INFO 17960 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:09:59.905+07:00  WARN 17960 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:10:00.391+07:00  INFO 17960 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:10:27.518+07:00  INFO 26820 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 26820 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:10:27.520+07:00  INFO 26820 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:10:27.818+07:00  INFO 26820 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:10:27.844+07:00  INFO 26820 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:10:28.257+07:00  INFO 26820 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:10:28.265+07:00  INFO 26820 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:10:28.265+07:00  INFO 26820 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:10:28.296+07:00  INFO 26820 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:10:28.296+07:00  INFO 26820 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2025-01-02T14:10:28.331+07:00  INFO 26820 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:10:28.555+07:00  INFO 26820 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49cb3881
+2025-01-02T14:10:28.556+07:00  INFO 26820 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:10:28.584+07:00  INFO 26820 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:10:28.615+07:00  INFO 26820 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:10:28.634+07:00  INFO 26820 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:10:28.833+07:00  INFO 26820 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:10:28.890+07:00  WARN 26820 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:10:29.404+07:00  INFO 26820 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:10:35.511+07:00  INFO 26820 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:10:35.726+07:00  INFO 26820 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:10:35.727+07:00  WARN 26820 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:10:35.746+07:00  WARN 26820 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:10:35.759+07:00  INFO 26820 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:10:35.905+07:00  INFO 26820 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:10:36.341+07:00  WARN 26820 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:10:36.515+07:00  INFO 26820 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:10:36.519+07:00  INFO 26820 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 9.282 seconds (process running for 9.671)
+2025-01-02T14:10:39.457+07:00  INFO 26820 --- [connectionDB] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:10:39.457+07:00  INFO 26820 --- [connectionDB] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:10:39.458+07:00  INFO 26820 --- [connectionDB] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:15:17.290+07:00  INFO 26820 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:15:17.294+07:00  INFO 26820 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:15:17.300+07:00  INFO 26820 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:15:17.300+07:00  INFO 26820 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:15:17.307+07:00  INFO 26820 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:15:22.552+07:00  INFO 36992 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 36992 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:15:22.554+07:00  INFO 36992 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:15:22.850+07:00  INFO 36992 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:15:22.876+07:00  INFO 36992 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:15:23.305+07:00  INFO 36992 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:15:23.312+07:00  INFO 36992 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:15:23.312+07:00  INFO 36992 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:15:23.339+07:00  INFO 36992 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:15:23.340+07:00  INFO 36992 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 755 ms
+2025-01-02T14:15:23.374+07:00  INFO 36992 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:15:23.589+07:00  INFO 36992 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c4cc644
+2025-01-02T14:15:23.590+07:00  INFO 36992 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:15:23.617+07:00  INFO 36992 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:15:23.648+07:00  INFO 36992 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:15:23.666+07:00  INFO 36992 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:15:23.855+07:00  INFO 36992 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:15:23.904+07:00  WARN 36992 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:15:24.386+07:00  INFO 36992 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:15:24.423+07:00  INFO 36992 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:15:24.578+07:00  INFO 36992 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:15:24.580+07:00  WARN 36992 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:15:24.604+07:00  WARN 36992 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:15:24.616+07:00  INFO 36992 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:15:24.739+07:00  INFO 36992 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:15:25.116+07:00  WARN 36992 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:15:25.294+07:00  INFO 36992 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:15:25.299+07:00  INFO 36992 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 2.997 seconds (process running for 3.341)
+2025-01-02T14:16:05.048+07:00  INFO 36992 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:16:05.048+07:00  INFO 36992 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:16:05.050+07:00  INFO 36992 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:16:16.003+07:00 ERROR 36992 --- [connectionDB] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT * FROM transaction WHERE account_id = ? LIMIT = ?]] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:732) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:723) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:748) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:804) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:218) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository.findTransactionsByAccountIdJDBCTemplate(TransactionJDBCRepository.java:90) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository$$SpringCGLIB$$0.findTransactionsByAccountIdJDBCTemplate(<generated>) ~[classes/:na]
+	at com.connection.database.service.impl.TransactionServiceImpl.findAllByAccountId(TransactionServiceImpl.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.service.impl.TransactionServiceImpl$$SpringCGLIB$$0.findAllByAccountId(<generated>) ~[classes/:na]
+	at com.connection.database.controller.TransactionController.getAccountNameJPA(TransactionController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-02T14:16:31.564+07:00  INFO 36992 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:16:31.569+07:00  INFO 36992 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:16:31.573+07:00  INFO 36992 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:16:31.573+07:00  INFO 36992 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:16:31.579+07:00  INFO 36992 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:16:36.712+07:00  INFO 35320 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 35320 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:16:36.713+07:00  INFO 35320 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:16:36.989+07:00  INFO 35320 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:16:37.015+07:00  INFO 35320 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:16:37.417+07:00  INFO 35320 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:16:37.425+07:00  INFO 35320 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:16:37.425+07:00  INFO 35320 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:16:37.456+07:00  INFO 35320 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:16:37.457+07:00  INFO 35320 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+2025-01-02T14:16:37.492+07:00  INFO 35320 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:16:37.705+07:00  INFO 35320 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e9a0bea
+2025-01-02T14:16:37.706+07:00  INFO 35320 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:16:37.734+07:00  INFO 35320 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:16:37.762+07:00  INFO 35320 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:16:37.780+07:00  INFO 35320 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:16:37.968+07:00  INFO 35320 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:16:38.019+07:00  WARN 35320 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:16:38.500+07:00  INFO 35320 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:16:38.537+07:00  INFO 35320 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:16:38.691+07:00  INFO 35320 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:16:38.693+07:00  WARN 35320 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:16:38.712+07:00  WARN 35320 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:16:38.725+07:00  INFO 35320 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:16:38.849+07:00  INFO 35320 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:16:39.228+07:00  WARN 35320 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:16:39.411+07:00  INFO 35320 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:16:39.415+07:00  INFO 35320 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 2.954 seconds (process running for 3.282)
+2025-01-02T14:16:49.454+07:00  INFO 35320 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:16:49.455+07:00  INFO 35320 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:16:49.456+07:00  INFO 35320 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:16:55.598+07:00 ERROR 35320 --- [connectionDB] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT * FROM transaction WHERE account_id = ? LIMIT = ?]] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:732) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:723) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:748) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:804) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:218) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository.findTransactionsByAccountIdJDBCTemplate(TransactionJDBCRepository.java:90) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository$$SpringCGLIB$$0.findTransactionsByAccountIdJDBCTemplate(<generated>) ~[classes/:na]
+	at com.connection.database.service.impl.TransactionServiceImpl.findAllByAccountId(TransactionServiceImpl.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.service.impl.TransactionServiceImpl$$SpringCGLIB$$0.findAllByAccountId(<generated>) ~[classes/:na]
+	at com.connection.database.controller.TransactionController.getAccountNameJPA(TransactionController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-02T14:16:57.823+07:00 ERROR 35320 --- [connectionDB] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT * FROM transaction WHERE account_id = ? LIMIT = ?]] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:732) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:723) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:748) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:804) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:218) ~[spring-jdbc-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository.findTransactionsByAccountIdJDBCTemplate(TransactionJDBCRepository.java:90) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.repository.jdbc.TransactionJDBCRepository$$SpringCGLIB$$0.findTransactionsByAccountIdJDBCTemplate(<generated>) ~[classes/:na]
+	at com.connection.database.service.impl.TransactionServiceImpl.findAllByAccountId(TransactionServiceImpl.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.service.impl.TransactionServiceImpl$$SpringCGLIB$$0.findAllByAccountId(<generated>) ~[classes/:na]
+	at com.connection.database.controller.TransactionController.getAccountNameJPA(TransactionController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-02T14:17:17.796+07:00  INFO 35320 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:17:17.801+07:00  INFO 35320 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:17:17.805+07:00  INFO 35320 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:17:17.805+07:00  INFO 35320 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:17:17.811+07:00  INFO 35320 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:17:22.975+07:00  INFO 14528 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 14528 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:17:22.977+07:00  INFO 14528 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:17:23.260+07:00  INFO 14528 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:17:23.286+07:00  INFO 14528 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:17:23.685+07:00  INFO 14528 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:17:23.694+07:00  INFO 14528 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:17:23.694+07:00  INFO 14528 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:17:23.725+07:00  INFO 14528 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:17:23.726+07:00  INFO 14528 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms
+2025-01-02T14:17:23.759+07:00  INFO 14528 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:17:23.971+07:00  INFO 14528 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a14fdf0
+2025-01-02T14:17:23.973+07:00  INFO 14528 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:17:23.999+07:00  INFO 14528 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:17:24.028+07:00  INFO 14528 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:17:24.047+07:00  INFO 14528 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:17:24.237+07:00  INFO 14528 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:17:24.286+07:00  WARN 14528 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:17:24.830+07:00  INFO 14528 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:17:24.869+07:00  INFO 14528 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:17:25.037+07:00  INFO 14528 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:17:25.039+07:00  WARN 14528 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:17:25.060+07:00  WARN 14528 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:17:25.075+07:00  INFO 14528 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:17:25.213+07:00  INFO 14528 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:17:25.616+07:00  WARN 14528 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:17:25.839+07:00  INFO 14528 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:17:25.843+07:00  INFO 14528 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 3.112 seconds (process running for 3.461)
+2025-01-02T14:17:36.037+07:00  INFO 14528 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:17:36.038+07:00  INFO 14528 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:17:36.039+07:00  INFO 14528 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:20:29.871+07:00  INFO 14528 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:20:29.875+07:00  INFO 14528 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:20:29.880+07:00  INFO 14528 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:20:29.881+07:00  INFO 14528 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:20:29.887+07:00  INFO 14528 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:26:05.572+07:00  INFO 38352 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 38352 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:26:05.573+07:00  INFO 38352 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:26:05.887+07:00  INFO 38352 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:26:05.913+07:00  INFO 38352 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:26:06.327+07:00  INFO 38352 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:26:06.335+07:00  INFO 38352 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:26:06.335+07:00  INFO 38352 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:26:06.368+07:00  INFO 38352 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:26:06.368+07:00  INFO 38352 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 766 ms
+2025-01-02T14:26:06.403+07:00  INFO 38352 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:26:06.666+07:00  INFO 38352 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e856100
+2025-01-02T14:26:06.666+07:00  INFO 38352 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:26:06.696+07:00  INFO 38352 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:26:06.740+07:00  INFO 38352 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:26:06.765+07:00  INFO 38352 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:26:06.997+07:00  INFO 38352 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:26:07.053+07:00  WARN 38352 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:26:07.609+07:00  INFO 38352 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:26:07.649+07:00  INFO 38352 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:26:07.820+07:00  INFO 38352 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:26:07.823+07:00  WARN 38352 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:26:07.842+07:00  WARN 38352 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:26:07.855+07:00  INFO 38352 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:26:07.985+07:00  INFO 38352 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:26:10.316+07:00  WARN 38352 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:26:10.507+07:00  INFO 38352 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:26:10.511+07:00  INFO 38352 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 5.184 seconds (process running for 5.562)
+2025-01-02T14:26:30.604+07:00  INFO 38352 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:26:30.604+07:00  INFO 38352 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:26:30.605+07:00  INFO 38352 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:28:20.991+07:00  INFO 38352 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:28:20.996+07:00  INFO 38352 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:28:21.001+07:00  INFO 38352 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:28:21.002+07:00  INFO 38352 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:28:21.011+07:00  INFO 38352 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:28:26.818+07:00  INFO 19708 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 19708 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:28:26.820+07:00  INFO 19708 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:28:27.101+07:00  INFO 19708 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:28:27.131+07:00  INFO 19708 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:28:27.528+07:00  INFO 19708 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:28:27.537+07:00  INFO 19708 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:28:27.537+07:00  INFO 19708 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:28:27.568+07:00  INFO 19708 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:28:27.568+07:00  INFO 19708 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 718 ms
+2025-01-02T14:28:27.600+07:00  INFO 19708 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:28:27.855+07:00  INFO 19708 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c1d57bc
+2025-01-02T14:28:27.856+07:00  INFO 19708 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:28:27.884+07:00  INFO 19708 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:28:27.924+07:00  INFO 19708 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:28:27.945+07:00  INFO 19708 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:28:28.151+07:00  INFO 19708 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:28:28.199+07:00  WARN 19708 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:28:28.703+07:00  INFO 19708 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:28:28.733+07:00  INFO 19708 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:28:28.892+07:00  INFO 19708 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:28:28.893+07:00  WARN 19708 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:28:28.912+07:00  WARN 19708 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:28:28.926+07:00  INFO 19708 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:28:29.048+07:00  INFO 19708 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:28:29.771+07:00  WARN 19708 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:28:29.956+07:00  INFO 19708 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:28:29.960+07:00  INFO 19708 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 3.384 seconds (process running for 3.744)
+2025-01-02T14:28:37.332+07:00  INFO 19708 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:28:37.332+07:00  INFO 19708 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:28:37.333+07:00  INFO 19708 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-02T14:30:29.169+07:00  INFO 19708 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:30:29.174+07:00  INFO 19708 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:30:29.179+07:00  INFO 19708 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:30:29.179+07:00  INFO 19708 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:30:29.187+07:00  INFO 19708 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:30:30.616+07:00  INFO 41700 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 41700 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:30:30.617+07:00  INFO 41700 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:30:30.902+07:00  INFO 41700 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:30:30.930+07:00  INFO 41700 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:30:31.344+07:00  INFO 41700 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:30:31.353+07:00  INFO 41700 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:30:31.353+07:00  INFO 41700 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:30:33.321+07:00  INFO 41700 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:30:33.321+07:00  INFO 41700 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2672 ms
+2025-01-02T14:30:33.355+07:00  INFO 41700 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:30:33.551+07:00  INFO 41700 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c38cd16
+2025-01-02T14:30:33.552+07:00  INFO 41700 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:30:33.576+07:00  INFO 41700 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:30:33.603+07:00  INFO 41700 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:30:33.621+07:00  INFO 41700 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:30:33.814+07:00  INFO 41700 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:30:33.857+07:00  WARN 41700 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:30:34.334+07:00  INFO 41700 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:30:34.365+07:00  INFO 41700 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:30:34.510+07:00  INFO 41700 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:30:34.512+07:00  WARN 41700 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:30:34.529+07:00  WARN 41700 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:30:34.542+07:00  INFO 41700 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:30:34.666+07:00  INFO 41700 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:30:35.092+07:00  WARN 41700 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:30:35.286+07:00  INFO 41700 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:30:35.290+07:00  INFO 41700 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 4.947 seconds (process running for 5.304)
+2025-01-02T14:32:59.856+07:00  INFO 41700 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:32:59.861+07:00  INFO 41700 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:32:59.866+07:00  INFO 41700 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:32:59.866+07:00  INFO 41700 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:32:59.874+07:00  INFO 41700 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:33:05.020+07:00  INFO 42888 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 42888 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:33:05.021+07:00  INFO 42888 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:33:05.308+07:00  INFO 42888 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:33:05.338+07:00  INFO 42888 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:33:05.743+07:00  INFO 42888 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:33:05.752+07:00  INFO 42888 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:33:05.752+07:00  INFO 42888 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:33:05.787+07:00  INFO 42888 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:33:05.787+07:00  INFO 42888 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2025-01-02T14:33:05.821+07:00  INFO 42888 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:33:06.079+07:00  INFO 42888 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@706f6d26
+2025-01-02T14:33:06.080+07:00  INFO 42888 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:33:06.109+07:00  INFO 42888 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:33:06.156+07:00  INFO 42888 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:33:06.179+07:00  INFO 42888 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:33:06.406+07:00  INFO 42888 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:33:06.460+07:00  WARN 42888 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:33:06.981+07:00  INFO 42888 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:33:07.023+07:00  INFO 42888 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:33:07.209+07:00  INFO 42888 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:33:07.212+07:00  WARN 42888 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:33:07.231+07:00  WARN 42888 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:33:07.243+07:00  INFO 42888 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:33:07.375+07:00  INFO 42888 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:33:07.781+07:00  WARN 42888 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:33:07.977+07:00  INFO 42888 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:33:07.982+07:00  INFO 42888 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 3.203 seconds (process running for 3.575)
+2025-01-02T14:33:08.120+07:00  INFO 42888 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:33:08.121+07:00  INFO 42888 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:33:08.121+07:00  INFO 42888 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-02T14:53:33.831+07:00  INFO 42888 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:53:33.857+07:00  INFO 42888 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:53:33.927+07:00  INFO 42888 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:53:33.934+07:00  INFO 42888 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:53:33.967+07:00  INFO 42888 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:54:02.756+07:00  INFO 42452 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 42452 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:54:02.758+07:00  INFO 42452 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:54:03.096+07:00  INFO 42452 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:54:03.126+07:00  INFO 42452 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:54:03.565+07:00  INFO 42452 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:54:03.575+07:00  INFO 42452 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:54:03.575+07:00  INFO 42452 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:54:03.621+07:00  INFO 42452 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:54:03.621+07:00  INFO 42452 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 832 ms
+2025-01-02T14:54:03.663+07:00  INFO 42452 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:54:03.960+07:00  INFO 42452 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74b00247
+2025-01-02T14:54:03.961+07:00  INFO 42452 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:54:03.993+07:00  INFO 42452 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:54:04.046+07:00  INFO 42452 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:54:04.072+07:00  INFO 42452 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:54:04.314+07:00  INFO 42452 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:54:04.377+07:00  WARN 42452 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:54:04.935+07:00  INFO 42452 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:54:04.977+07:00  INFO 42452 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:54:05.153+07:00  INFO 42452 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:54:05.155+07:00  WARN 42452 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:54:05.174+07:00  WARN 42452 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:54:05.189+07:00  INFO 42452 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:54:05.319+07:00  INFO 42452 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:54:05.756+07:00  WARN 42452 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:54:05.958+07:00  INFO 42452 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:54:05.962+07:00  INFO 42452 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 3.454 seconds (process running for 3.833)
+2025-01-02T14:54:43.893+07:00  INFO 42452 --- [connectionDB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:54:43.893+07:00  INFO 42452 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:54:43.894+07:00  INFO 42452 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T14:55:07.657+07:00  INFO 42452 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:55:07.660+07:00  INFO 42452 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:55:07.665+07:00  INFO 42452 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:55:07.666+07:00  INFO 42452 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:55:07.673+07:00  INFO 42452 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:55:12.788+07:00  INFO 38008 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 38008 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:55:12.789+07:00  INFO 38008 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:55:13.069+07:00  INFO 38008 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:55:13.100+07:00  INFO 38008 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:55:13.513+07:00  INFO 38008 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:55:13.520+07:00  INFO 38008 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:55:13.521+07:00  INFO 38008 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:55:13.550+07:00  INFO 38008 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:55:13.550+07:00  INFO 38008 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 732 ms
+2025-01-02T14:55:13.584+07:00  INFO 38008 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:55:13.791+07:00  INFO 38008 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2aa14ae6
+2025-01-02T14:55:13.794+07:00  INFO 38008 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:55:13.820+07:00  INFO 38008 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:55:13.849+07:00  INFO 38008 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:55:13.867+07:00  INFO 38008 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:55:14.055+07:00  INFO 38008 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:55:14.107+07:00  WARN 38008 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:55:14.599+07:00  INFO 38008 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:55:14.634+07:00  INFO 38008 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:55:14.779+07:00  INFO 38008 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:55:14.781+07:00  WARN 38008 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:55:14.798+07:00  WARN 38008 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:55:14.811+07:00  INFO 38008 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:55:14.945+07:00  INFO 38008 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:55:15.337+07:00  WARN 38008 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:55:15.531+07:00  INFO 38008 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:55:15.535+07:00  INFO 38008 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 2.99 seconds (process running for 3.32)
+2025-01-02T14:55:26.359+07:00  INFO 38008 --- [connectionDB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T14:55:26.359+07:00  INFO 38008 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T14:55:26.359+07:00  INFO 38008 --- [connectionDB] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-02T14:55:36.439+07:00 ERROR 38008 --- [connectionDB] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.data.domain.Pageable.getPageSize()" because the return value of "com.connection.database.dto.TransactionRequest.getPageable()" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.data.domain.Pageable.getPageSize()" because the return value of "com.connection.database.dto.TransactionRequest.getPageable()" is null
+	at com.connection.database.service.impl.TransactionServiceImpl.findAllByAccountId(TransactionServiceImpl.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.0.jar:6.2.0]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.0.jar:6.2.0]
+	at com.connection.database.service.impl.TransactionServiceImpl$$SpringCGLIB$$0.findAllByAccountId(<generated>) ~[classes/:na]
+	at com.connection.database.controller.TransactionController.getAccountNameJPA(TransactionController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-02T14:59:40.437+07:00  INFO 38008 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T14:59:40.443+07:00  INFO 38008 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T14:59:40.447+07:00  INFO 38008 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:59:40.448+07:00  INFO 38008 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T14:59:40.455+07:00  INFO 38008 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T14:59:45.629+07:00  INFO 14868 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Starting ConnectionDBApplication using Java 23.0.1 with PID 14868 (N:\Git Nhan Pham\this_is_java\spring\connection_db\target\classes started by nhanph in N:\Git Nhan Pham\this_is_java\spring\connection_db)
+2025-01-02T14:59:45.631+07:00  INFO 14868 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T14:59:45.918+07:00  INFO 14868 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T14:59:45.946+07:00  INFO 14868 --- [connectionDB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-01-02T14:59:46.358+07:00  INFO 14868 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T14:59:46.366+07:00  INFO 14868 --- [connectionDB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T14:59:46.366+07:00  INFO 14868 --- [connectionDB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-02T14:59:46.393+07:00  INFO 14868 --- [connectionDB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T14:59:46.393+07:00  INFO 14868 --- [connectionDB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 731 ms
+2025-01-02T14:59:46.427+07:00  INFO 14868 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T14:59:46.635+07:00  INFO 14868 --- [connectionDB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20440c6c
+2025-01-02T14:59:46.636+07:00  INFO 14868 --- [connectionDB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T14:59:46.665+07:00  INFO 14868 --- [connectionDB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T14:59:46.693+07:00  INFO 14868 --- [connectionDB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2025-01-02T14:59:46.710+07:00  INFO 14868 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:59:46.898+07:00  INFO 14868 --- [connectionDB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T14:59:46.945+07:00  WARN 14868 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:59:47.425+07:00  INFO 14868 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:59:47.459+07:00  INFO 14868 --- [connectionDB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T14:59:47.610+07:00  INFO 14868 --- [connectionDB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T14:59:47.611+07:00  WARN 14868 --- [connectionDB] [main] o.h.e.j.c.i.ConnectionProviderInitiator  : HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2025-01-02T14:59:47.628+07:00  WARN 14868 --- [connectionDB] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T14:59:47.642+07:00  INFO 14868 --- [connectionDB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T14:59:47.765+07:00  INFO 14868 --- [connectionDB] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-02T14:59:49.628+07:00  WARN 14868 --- [connectionDB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T14:59:49.819+07:00  INFO 14868 --- [connectionDB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T14:59:49.824+07:00  INFO 14868 --- [connectionDB] [main] c.c.database.ConnectionDBApplication     : Started ConnectionDBApplication in 4.429 seconds (process running for 4.772)
+2025-01-02T15:00:07.845+07:00  INFO 14868 --- [connectionDB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T15:00:07.845+07:00  INFO 14868 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T15:00:07.846+07:00  INFO 14868 --- [connectionDB] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T15:34:39.609+07:00  INFO 14868 --- [connectionDB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T15:34:39.650+07:00  INFO 14868 --- [connectionDB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T15:34:39.726+07:00  INFO 14868 --- [connectionDB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T15:34:39.736+07:00  INFO 14868 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T15:34:39.775+07:00  INFO 14868 --- [connectionDB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
