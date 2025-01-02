@@ -5,12 +5,14 @@ import lombok.*;
 
 @Entity
 @Table(name = "account")
-@Data
 @AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "account_id")
     private Long id;
 
     @Column(name = "name")
