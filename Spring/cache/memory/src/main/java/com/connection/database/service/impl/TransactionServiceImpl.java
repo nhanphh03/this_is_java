@@ -5,8 +5,6 @@ import com.connection.database.repository.jpa.TransactionJPARepository;
 import com.connection.database.service.TransactionService;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +35,7 @@ public class TransactionServiceImpl implements TransactionService {
         for (int i = 0; i < 7000000; i++) {
             Transaction transaction = new Transaction();
             transaction.setTransactionID(ACCOUNT_IDS.get(random.nextInt(ACCOUNT_IDS.size())));
-            transaction.setTransactionDate(LocalDateTime.now().minusDays(random.nextInt(28)));
+//            transaction.setTransactionDate(LocalDateTime.now().minusDays(random.nextInt(28)));
 //            transaction.setAmount(BigDecimal.valueOf(random.nextDouble() * 50000).setScale(2, RoundingMode.HALF_UP));
             transaction.setTransactionType(TRANSACTION_TYPES.get(random.nextInt(TRANSACTION_TYPES.size())));
             transaction.setStatus(STATUSES.get(random.nextInt(STATUSES.size())));
@@ -58,5 +56,10 @@ public class TransactionServiceImpl implements TransactionService {
         }
 
         System.out.println("7 million transactions inserted.");
+    }
+
+    @Override
+    public List<Transaction> findAllByAccountID(Long accountID) {
+        return transactionRepository.findAllByAccountID(accountID);
     }
 }

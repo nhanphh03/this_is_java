@@ -2,10 +2,9 @@ package com.connection.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.LocalDateTime;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Builder
@@ -24,7 +23,7 @@ public class Transaction {
     private Long accountID;
 
     @Column(name = "transaction_date")
-    private LocalDateTime transactionDate;
+    private Timestamp transactionDate;
 
     @Column(name = "amount")
     private BigInteger amount;

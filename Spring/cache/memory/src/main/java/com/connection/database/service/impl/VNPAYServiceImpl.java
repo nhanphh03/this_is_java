@@ -28,7 +28,7 @@ public class VNPAYServiceImpl implements VNPayService {
         Transaction transaction = Transaction.builder()
                         .amount(transactionRequest.getAmount())
                         .accountID(transactionRequest.getAccountId())
-                        .transactionDate(LocalDateTime.now())
+//                        .transactionDate(LocalDateTime.now())
                         .transactionType(transactionRequest.getTransactionType())
                         .status("pending")
                         .currency("vn")
