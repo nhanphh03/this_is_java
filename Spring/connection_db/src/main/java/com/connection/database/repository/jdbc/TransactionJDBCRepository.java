@@ -108,8 +108,5 @@ public class TransactionJDBCRepository {
                 rs.getString("currency"),
                 rs.getString("amount")
         ));
-
-
-
-
+    }
 }
