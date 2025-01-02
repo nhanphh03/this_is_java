@@ -55,11 +55,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 //    Integer a = customerRepository.findAll().size();
 //    Integer b = accountJPARepository.findAll().size();
-//
-        Integer a = customerJdbcRepository.getListCustomer();
-        Integer b = customerJdbcRepository.getListAccount().size();
+////
+//        Integer a = customerJdbcRepository.getListCustomer();
+//        Integer b = customerJdbcRepository.getListAccount().size();
+        
 
-        return a + b;
+        return 2;
     }
 
     @Transactional

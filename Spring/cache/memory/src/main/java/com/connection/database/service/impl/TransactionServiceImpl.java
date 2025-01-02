@@ -38,7 +38,7 @@ public class TransactionServiceImpl implements TransactionService {
             Transaction transaction = new Transaction();
             transaction.setTransactionID(ACCOUNT_IDS.get(random.nextInt(ACCOUNT_IDS.size())));
             transaction.setTransactionDate(LocalDateTime.now().minusDays(random.nextInt(28)));
-            transaction.setAmount(BigDecimal.valueOf(random.nextDouble() * 50000).setScale(2, RoundingMode.HALF_UP));
+//            transaction.setAmount(BigDecimal.valueOf(random.nextDouble() * 50000).setScale(2, RoundingMode.HALF_UP));
             transaction.setTransactionType(TRANSACTION_TYPES.get(random.nextInt(TRANSACTION_TYPES.size())));
             transaction.setStatus(STATUSES.get(random.nextInt(STATUSES.size())));
             transaction.setCurrency(CURRENCIES.get(random.nextInt(CURRENCIES.size())));

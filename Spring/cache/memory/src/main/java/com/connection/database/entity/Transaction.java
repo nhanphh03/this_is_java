@@ -1,13 +1,18 @@
 package com.connection.database.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transaction {
 
     @Id
@@ -22,7 +27,7 @@ public class Transaction {
     private LocalDateTime transactionDate;
 
     @Column(name = "amount")
-    private BigDecimal amount;
+    private BigInteger amount;
 
     @Column(name = "transaction_type")
     private String transactionType;
